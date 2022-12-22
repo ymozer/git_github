@@ -9,7 +9,7 @@ Git yerel olarak çalışır. İnternet üzerinden bir veri çekmeden dosyaları
 
 Git bu kaydetmeleri yaparken verimli olmaya çalışır. Örneğin bir dosya üzerinde değişiklik yapmadıysanız o dosyayı yeni versiyona kopyalamak yerine dosyayı önceki versiyondan referans alır.
 
-![image-20221221192658558](../images/image-20221221192658558.png)
+![image-20221221192658558](images/image-20221221192658558.png)
 
 Git'te bir veriyi, dosyayı geri getirilemeyecek şekilde silmek zordur. (Bütünlüğü vardır.)
 
@@ -117,7 +117,7 @@ Git Reposu içinde yer alan dosyaların 3 durumu vardır:
 2. **Staged (Aşamalanmış):** Şuanki versiyonda değiştirilmiş dosya sonraki anlık görüntüye kaydedilmek üzere işaretlenmiş
 3. **Commited (Kaydedilmiş):** Veri başarılı ve güvenli şekilde yerel veri tabanında depolandı
 
-![image-20221221193222913](../images/image-20221221193222913.png)
+![image-20221221193222913](images/image-20221221193222913.png)
 
 Commit'lenmemiş yani henüz repomuza kaydolmamış dosyalar hangi aşamada olduğunu görebilmemiz için `git status` komutunu kullanırız. Bu komut bize 3 grupta yer alan dosyaları listeler:
 
@@ -165,17 +165,17 @@ Yaptığımız değişiklikler farklı konularda ise her konu için mümkünse f
 
 Eğer değiştirdiğimiz şeyler tamamlanmamış değilse yani bir bütünlüğü YA DA test edilmemişse yoksa commit yapmamaya dikkat etmelisiniz. Eğer arada bir yaptıklarınızı kayıt etmek istiyorsanız `git stash` komutunu kullanabilirsiniz:
 
-![image-20221221213046261](../images/image-20221221213046261.png)
+![image-20221221213046261](images/image-20221221213046261.png)
 
 
 
 - `git stash pop` komutu listenin en üstündeki değişikliği projemize ekler ve bu değişikliği stash listesinden siler.
 
-  ![image-20221221213944269](../images/image-20221221213944269.png)
+  ![image-20221221213944269](images/image-20221221213944269.png)
 
 - `git stash apply` komutu istenilen değişikliği projemize ekler ama silmez. 
 
-  ![image-20221221215455504](../images/image-20221221215455504.png)
+  ![image-20221221215455504](images/image-20221221215455504.png)
 
 - `git stash drop` komutu değişiliği listeden silmemize yarar.
 
@@ -204,11 +204,11 @@ Branchler bize aynı dosyanın farklı versiyonu ile paralel çalışmamızı sa
 
 Branchlerin bu özelliği her branchi farklı  amaçlar için kullanmamıza  olanak tanır. Örneğin geliştirme için ayrı bir branchimiz ve yayınlanan sürüm için ayrı sürümümüz olabilir.
 
-![image-20221222091415120](../images/image-20221222091415120.png)
+![image-20221222091415120](images/image-20221222091415120.png)
 
-![image-20221222091621921](../images/image-20221222091621921.png)
+![image-20221222091621921](images/image-20221222091621921.png)
 
-![image-20221222085107351](../images/image-20221222085107351.png)
+![image-20221222085107351](images/image-20221222085107351.png)
 
 yukarıda gözüktüğü gibi, her commit yaptığımızda bulunduğumuz branch pointerı en son commitimize ilerler. 
 
@@ -216,10 +216,10 @@ HEAD pointerı bizim hangi branch üzerinde çalıştığımızı belirten özel
 
 Git log komutuna aşağıdaki gibi parametreleri ekleyerek commit grafiğini görüntüleyebiliriz.
 
-![image-20221222085530940](../images/image-20221222085530940.png)
+![image-20221222085530940](images/image-20221222085530940.png)
 
 Bu yukarıdaki komutu ders sırasında çokça kullanacağımızdan kısayol ekleyelim:
-![image-20221222085844998](../images/image-20221222085844998.png)
+![image-20221222085844998](images/image-20221222085844998.png)
 
 Şimdi main branchımız yanında farklı branchlar da ekleyelim.
 
@@ -229,21 +229,21 @@ ___
 
 `git branch [BRANCH_NAME]` ile yeni bir branch oluşturabiliriz. Bu komut, HEAD pointerı nerede konumlandıysa orada branchlarımızı oluşturur. Tek başına `git branch` kullanımı diğer branchları listeler ve hangi branch üstünde çalıştığımızı gösterir. -v seçeneği ile detaylı listeleme yapılabilir.
 
-![image-20221222090415882](../images/image-20221222090415882.png)
+![image-20221222090415882](images/image-20221222090415882.png)
 
-`git checkout` komutu ile üzerinde çalıştığımızı branchı değiştirebiliriz. Bu da HEAD pointerının belirttiğimiz branchı pointlemesine yol açar. Şimdi bu branchları checkout yapalım ve onlar üstünde commitlerimizi yapalım. ![image-20221222091124361](../images/image-20221222091124361.png)
+`git checkout` komutu ile üzerinde çalıştığımızı branchı değiştirebiliriz. Bu da HEAD pointerının belirttiğimiz branchı pointlemesine yol açar. Şimdi bu branchları checkout yapalım ve onlar üstünde commitlerimizi yapalım. ![image-20221222091124361](images/image-20221222091124361.png)
 
-![image-20221222091856336](../images/image-20221222091856336.png)
+![image-20221222091856336](images/image-20221222091856336.png)
 
-![image-20221222092009468](../images/image-20221222092009468.png)
+![image-20221222092009468](images/image-20221222092009468.png)
 
-![image-20221222092235029](../images/image-20221222092235029.png)
+![image-20221222092235029](images/image-20221222092235029.png)
 
-![image-20221222093809568](../images//image-20221222093809568.png)
+![image-20221222093809568](images//image-20221222093809568.png)
 
-![image-20221222093847767](../images/image-20221222093847767.png)
+![image-20221222093847767](images/image-20221222093847767.png)
 
-![image-20221222094215676](../images/image-20221222094215676.png)
+![image-20221222094215676](images/image-20221222094215676.png)
 
 ---
 
@@ -253,13 +253,13 @@ ___
 
 main branch ile production branchını mergelemek istiyoruz. Bunun için `git merge` komutunu kullanıyoruz.
 
-![image-20221222095559032](../images/image-20221222095559032.png)
+![image-20221222095559032](images/image-20221222095559032.png)
 
-![image-20221222095613617](../images/image-20221222095613617.png)
+![image-20221222095613617](images/image-20221222095613617.png)
 
---merged seçeneği birleşen branchları listeler:![image-20221222095748400](../images/image-20221222095748400.png)
+--merged seçeneği birleşen branchları listeler:![image-20221222095748400](images/image-20221222095748400.png)
 
-Şimdi bu 2 branch mergelendiği ve aynı içerikte olduğu için production'ı silebiliriz.![image-20221222100024919](../images/image-20221222100024919.png)
+Şimdi bu 2 branch mergelendiği ve aynı içerikte olduğu için production'ı silebiliriz.![image-20221222100024919](images/image-20221222100024919.png)
 
 ---
 
@@ -267,7 +267,7 @@ main branch ile production branchını mergelemek istiyoruz. Bunun için `git me
 
 Bu merge 3 tane commite bakarak merge'ü gerçekleştirdiğinden bu adı almıştır. 
 
-![image-20221222100255388](../images/image-20221222100255388.png)
+![image-20221222100255388](images/image-20221222100255388.png)
 
 Yukarıda 3 way merge'ü yapmaya çalıştık fakat başarılı olmadı çünkü aynı dosyadaki aynı satırı değiştirdiğimizden  CONFLICT oluştu.  Şimdi bunları nasıl gidereceğimize bakalım.
 
@@ -275,17 +275,17 @@ ___
 
 #### MERGE CONFLICTS
 
-Eğer confilict içeren bir merge yapmaya çalışırsak git bizim için confilictin nerede olduğunu aşağıdaki gibi işaretliyor:![image-20221222102517440](../images/image-20221222102517440.png)4
+Eğer confilict içeren bir merge yapmaya çalışırsak git bizim için confilictin nerede olduğunu aşağıdaki gibi işaretliyor:![image-20221222102517440](images/image-20221222102517440.png)4
 
 Aşağıdaki gibi conflictlerden birini seçerek dosyamızı düzenlediğimizde sorun düzelecektir:
 
-![image-20221222103058944](../images/image-20221222103058944.png)
+![image-20221222103058944](images/image-20221222103058944.png)
 
-![image-20221222103412973](../images/image-20221222103412973.png)
+![image-20221222103412973](images/image-20221222103412973.png)
 
 Sonrasında testing branchimizi silebiliriz:
 
-![image-20221222103700059](../images/image-20221222103700059.png)
+![image-20221222103700059](images/image-20221222103700059.png)
 
 
 ---
