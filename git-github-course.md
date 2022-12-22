@@ -1,6 +1,6 @@
-# GİT-GİTHUB
-## Ders #2 
-### Tekrar
+# GIT-GITHUB
+---
+#### Hazırlayan:  Yusuf Metin ÖZER
 ---
 
 Git, bir versiyon kontrol sistemidir. Projelerimizi versiyonlar olarak kaydetmemizi ve istediğimiz zaman bu versiyonlara dönmemize yarar. Takım çalışması gereken çalışmalarda iş bölümü planlamasını kolaylaştırır.  
@@ -57,7 +57,7 @@ Git repositorymizi oluşturmadan önce yapılması gereken değişiklikler:
 1. Herhangi bir versiyon kontrol sistemi içinde yer almayan yerel ya da dizinlerinizi Git reposuna dönüştürerek.
 2. Klonlayarak 
 
-#### Local (Yerel) Projeden Repo Oluşturma
+#### LOCAL (YEREL) PROJEDEN REPO OLUŞTURMA
 
 ```bash
 mkdir ilk_git_repom
@@ -67,7 +67,7 @@ ls -la
 ```
 Bu komutları girdiğimizde içi boş bir git reposu oluşturmuş olacağız. Eğer `ls -la` komutu ile dizinimizi görüntülersek gizli dizin olan `.git` adındaki dosyalarımızın kaydolduğu repomuzu görmüş oluruz.
 
-#### Remote Serverlardaki Projeleri Klonlayarak Repo Oluşturma
+#### REMOTE SERVERLARDAKİ PROJELERİ KLONLAYARAK REPO OLUŞTURMA
 
 ```bash
 git clone https://github.com/id-Software/DOOM.git
@@ -87,7 +87,7 @@ Birlikte çalıştığınız proje arkadaşlarınızla birlikte verimli çalış
 
 ---
 
-### `.gitignore` Dosyası
+### `.gitignore` DOSYASI
 
 Eğer bazı dosyalarımızı git reposuna kaydetmek istemiyorsak bu dosyayı kullanırız. Mesela bu dosyalar sizin üzerinizde çalıştığınız projenin kullandığı server'a giriş bilgilerinizi içeren konfigürasyon dosyalarınız olabilir. Ya da kendinize özel notlar aldığınız klasörün karşı tarafa gitmesini istemiyorsanız da kullanabilirsiniz.
 
@@ -125,7 +125,7 @@ Commit'lenmemiş yani henüz repomuza kaydolmamış dosyalar hangi aşamada oldu
 - **Changes not staged for commit (Commit için henüz hazır olmayan dosyalar):** Bu gruptaki dosyalar değişiklik yaptığımız fakat henüz Staging Area'ya eklemediğimiz dosyalardır. Bu dosyalar bir önceki grubun içine eklemediğimiz sürece bir sonraki commit'e dahil olmayacaklarıdır.
 - **Untracked files (Versiyon takibinde olmayan dosyalar):** Bu gruptaki dosyalar ise henüz versiyon kontrolü altına almadığımız dosyalardır.
 
-####  `git add ve git rm` Komutları
+####  `git add ve git rm` KOMUTLARI
 
 Dosyalarımız Stage'lemek için git add komutunu kullanırız ve bu bize bu dosyanın commite hazır olduğunu belirtir.
 
@@ -196,7 +196,7 @@ Eğer commit içeriklerini görmek istiyorsak -p parametresi detaylı bir şekil
 
 ---
 
-## Bu Haftanın Konusu: Branching
+## BU HAFTANIN KONUSU: BRANCHING
 
 Git'te her repo farkında olmasanız bile bir branch (dal) altındadır. Örneğin: Dersin başında config olarak eklediğimiz **main** branch'ını belirttiğimiz komut bize sonraki repo oluşturduğumuzda main isimli branchı kullancağımızı belirtti. Ancak git varsayılan olarak **master** adlı branch'ı oluşturur.
 
@@ -247,9 +247,9 @@ ___
 
 ---
 
-### MERGE'ing (Birleştirme)
+### MERGING (BİRLEŞTİRME)
 
-#### Fast-forward merge
+#### FAST-FORWARD MERGE
 
 main branch ile production branchını mergelemek istiyoruz. Bunun için `git merge` komutunu kullanıyoruz.
 
@@ -286,3 +286,23 @@ Aşağıdaki gibi conflictlerden birini seçerek dosyamızı düzenlediğimizde 
 Sonrasında testing branchimizi silebiliriz:
 
 ![image-20221222103700059](images/image-20221222103700059.png)
+
+
+---
+
+### REMOTE SERVER'LA İLETİŞİM
+
+`git push` ve `git pull` komutları ile sırasıyla remote server'lara commitlerimizi gönderebilir ya da çekebiliriz. Tabi bu işlemleri yapabilmek için remote serverda hem hesabınız olmalı hem de remote'taki repo ya size ait olmalı ya da repo için giriş yetkiniz olmalı. 
+
+`git push` komutunu kullanmadan önce ilk önce `git pull` ile serverdan değişiklikleri çekmemiz gerekir. Bu çalıştığınız branch için en sonki committe olmanız sağlar. Ayrıca `git pull` kullanmadan dosyalar üzerinde değişiklik yaparsak büyük ihtimalle conflict oluşacaktır. 
+
+---
+## KULLANILABİLECEK KAYNAKLAR
+
+* [Git cheatsheet by GitHub](https://education.github.com/git-cheat-sheet-education.pdf)
+
+* [Pro Git by Git](https://git-scm.com/book/en/v2)
+
+## HAZIRLARKEN KULANLILAN DİĞER KAYNAKLAR
+* [David MAHLER'in YouTube Kanalı](https://www.youtube.com/@DavidMahler)
+* [Ali ÖZGÜR'ün git101 Türkçe Online Kitabı](https://aliozgur.gitbooks.io/git101/content/)
