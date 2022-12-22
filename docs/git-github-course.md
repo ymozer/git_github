@@ -130,9 +130,9 @@ Commit'lenmemiş yani henüz repomuza kaydolmamış dosyalar hangi aşamada oldu
 Dosyalarımız Stage'lemek için git add komutunu kullanırız ve bu bize bu dosyanın commite hazır olduğunu belirtir.
 
 ```bash
-git add .		 #--> Bulunulan dizinin içindeki tüm dosyaları stagelemeye yarar.
-git style.css /images	 #--> Tek tek dosyaları-dizinleri gösterildiği gibi stageleyebiliriz.
-git add *.jsx		 #--> Wildcard kullanımı ile kullanımı ile stageleyebiliriz.
+git add .		 	#--> Bulunulan dizinin içindeki tüm dosyaları stagelemeye yarar.
+git add style.css /images	#--> Tek tek dosyaları-dizinleri gösterildiği gibi stageleyebiliriz.
+git add *.jsx		 	#--> Wildcard kullanımı ile kullanımı ile stageleyebiliriz.
 ```
 
  Dosyaların bir sonraki committe yer almayacağını belirtmek için `git rm` komutunu kullanırız.
